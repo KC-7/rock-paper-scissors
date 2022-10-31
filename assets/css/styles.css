@@ -1,0 +1,35 @@
+body {
+    background-color: rebeccapurple;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.option {
+    background-color: lime;
+    cursor: pointer; /* This changes the the mouse to a pointer when hovering, credit to Web Dev Simplified on Youtube */
+    font-size: 2.5rem;
+    transition: 250ms; /* Slows the transition when increasing scale while hovering */
+}
+
+.option {
+    transform: scale(1.25); /* Increases the size when hovering */
+}
+
+/* The following code displays the results side by side centered */
+.results {
+    margin-top: 1.5rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.score {
+    margin-left: .25rem;
+}
