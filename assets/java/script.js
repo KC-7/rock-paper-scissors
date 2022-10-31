@@ -1,28 +1,31 @@
 const optionButtons = document.querySelectorAll('[data-option]')
+const finalColumn = document.querySelector('[data-final-column]')
+const computerScoreSpan = document.querySelector('[data-computer-score]')
+const playerScoreSpan = document.querySelector('[data-player-score]')
 const OPTIONS = [
     {
         name: "rock",
-        icon: "<i class="fas fa-hand-rock"></i>",
+        icon: "Rock",
         beats: "scissors"
     }
     {
         name: "paper",
-        icon: "<i class="fas fa-hand-paper"></i>",
+        icon: "Paper",
         beats: "rock"
     }
     {
         name: "scissors",
-        icon: "<i class="fas fa-hand-scissors"></i>",
+        icon: "Scissors",
         beats: "paper"
     }
     {
         name: "lizard",
-        icon: "<i class="fas fa-hand-lizard"></i>",
+        icon: "Lizard",
         beats: "XXX"
     }
     {
         name: "spock",
-        icon: "<i class="fas fa-hand-spock"></i>",
+        icon: "Spock",
         beats: "XXX"
     }
 ]
@@ -37,15 +40,26 @@ optionButtons.forEach(optionButton => {
 
 function makeOption(option) {
     const computerOption = randomOption()
-    const yourWinner = isWinner(option, computerOption)
+    const playerWinner = isWinner(option, computerOption)
     const computerWinner = isWinner(computerOption, option)
     
-    addOptionResult(computerSelection, computerWinner)
+    addOptionResult(computerOption, computerWinner)
     addOptionResult(selection, yourWinner)
+
+    if (playerWinner) incrementScore(playerScoreSpan)
+    if (computerWinner) incrementScore(computerScoreSpan)
+}
+
+function incrementScore(scoreSpan){
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) +1
 }
 
 function addOptionResult(option, winner) {
-
+    const div = document.createElement('div')
+    div.innerText = option.icon
+    div.classList.add('result-option')
+    if (winner) div.classList.add('Winner')
+    finalColumn.after(div)
 }
 
 function isWinner(option, opponentOption) {
