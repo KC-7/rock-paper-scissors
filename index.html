@@ -4,25 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
+
+    <!-- Link to Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Link for Favicon (browser tab image) - learned from w3schools -->
+    <link rel="icon" href="assets/images/eintstein.webp">
+
+    <!-- font awesome script is at the end of the body to speed up load time -->
+
 </head>
 <body>
-    <div class="options">
-        <button class="option"><i class="fas fa-hand-rock"></i></button>
-        <button class="option"><i class="fas fa-hand-paper"></i></button>
-        <button class="option"><i class="fas fa-hand-scissors"></i></button>
-        <button class="option"><i class="fas fa-hand-lizard"></i></button>
-        <button class="option"><i class="fas fa-hand-spock"></i></button>
-    </div>
-    <div class="results">
-        <div>
-            Player
-            <span class="score">0</span>
+
+    <header>
+        Rock, Paper, Scissors, Lizard, Spock
+    </header>
+
+    <section>
+        <div class="options">
+            <button class="option"><i class="fas fa-hand-rock"></i></button>
+            <button class="option"><i class="fas fa-hand-paper"></i></button>
+            <button class="option"><i class="fas fa-hand-scissors"></i></button>
+            <button class="option"><i class="fas fa-hand-lizard"></i></button>
+            <button class="option"><i class="fas fa-hand-spock"></i></button>
         </div>
-        <div>
-            Computer
-            <span class="score">0</span>
+        <div class="results">
+            <div>
+                Player
+                <span class="score">0</span>
+            </div>
+            <div>
+                Computer
+                <span class="score">0</span>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <div>
+            <h3>Download our app:</h3>
+
+            <ul id="app-downloads">
+                <li>
+                    <a href="https://play.google.com/store/games" target="_blank" rel="noopener"
+                        aria-label="Link to our Google Play Store page (opens in new tab)">
+                        <i class="fab fa-google-play"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/ie/app-store/" target="_blank" rel="noopener"
+                        aria-label="Link to our Apple App Store page (opens in new tab)">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/872cb96f02.js" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
