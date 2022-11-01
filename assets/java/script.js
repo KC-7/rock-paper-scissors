@@ -5,34 +5,24 @@ const playerScoreSpan = document.querySelector('[data-player-score]')
 const OPTIONS = [
     {
         name: "rock",
-        icon: "Rock",
+        icon: "Rock ✊",
         beats: "scissors"
-    }
+    },
     {
         name: "paper",
-        icon: "Paper",
+        icon: "Paper ✋",
         beats: "rock"
-    }
+    },
     {
         name: "scissors",
-        icon: "Scissors",
+        icon: "Scissors ✌",
         beats: "paper"
-    }
-    {
-        name: "lizard",
-        icon: "Lizard",
-        beats: "XXX"
-    }
-    {
-        name: "spock",
-        icon: "Spock",
-        beats: "XXX"
     }
 ]
 
 optionButtons.forEach(optionButton => {
     optionButton.addEventListener('click', e=> {
-        const selectionName = optionButton.CDATA_OPTION_NODE.option
+        const optionName = optionButton.dataset.option
         const option = OPTIONS.find(option => option.name === optionName)
         makeOption(optionName)
     })
@@ -44,7 +34,7 @@ function makeOption(option) {
     const computerWinner = isWinner(computerOption, option)
     
     addOptionResult(computerOption, computerWinner)
-    addOptionResult(selection, yourWinner)
+    addOptionResult(option, playerWinner)
 
     if (playerWinner) incrementScore(playerScoreSpan)
     if (computerWinner) incrementScore(computerScoreSpan)
