@@ -1,3 +1,10 @@
+/* Remove: margin, padding and border */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 body {
     background-color: rebeccapurple;
     color: whitesmoke;
@@ -5,8 +12,10 @@ body {
     font-size: larger;
 }
 
-a {
-    color: lightpink;
+header {
+    height: 100px;
+    background-color: plum;
+    color: rebeccapurple;
 }
 
 .selections {
@@ -19,10 +28,13 @@ a {
 }
 
 .selection {
-    background-color: lightpink;
+    background-color: plum;
     cursor: pointer; /* This changes the the mouse to a pointer when hovering, credit to Web Dev Simplified on Youtube */
     font-size: 2.5rem;
     transition: 250ms; /* Slows the transition when increasing scale while hovering */
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
 }
 
 .selection:hover {
@@ -41,4 +53,19 @@ a {
 
 .score {
     margin-left: .25rem;
+}
+
+footer {
+    height: 100px;
+    font-size: xx-large;
+    background-color: plum;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+footer a {
+    color: rebeccapurple;
 }
