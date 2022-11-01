@@ -82,7 +82,7 @@ footer {
     background-color: plum;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
 }
