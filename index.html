@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Rock Paper Scissors JavaScript Online Game">
+    <meta name="keywords" content="Rock Paper Scissors, JavaScript, Online Game, Play against computer">
+
+    <!-- Changes broswer nav bar color (Chrome Mobile) -->
+    <meta name="theme-color" content="#663399"> <!-- FEATURE NOT TESTED YET, REMOVE COMMENT ONCE TESTED -->
+
     <title>
         Rock, Paper, Scissors
         <!--, Lizard, Spock-->
@@ -33,27 +39,39 @@
                 <!--, Lizard, Spock-->
             </h1>
         </div>
-        <div class="popup" onclick="myFunction()">How To Play
-            <span class="popuptext" id="myPopup">
-                The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it
-                at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until
-                a winner is found.
-                <br>
-                <ul>
-                    <li>Scissors cuts Paper</li>
-                    <li>Paper covers Rock</li>
-                    <li>Rock crushes Lizard</li>
-                    <li>Lizard poisons Spock</li>
-                    <li>Spock smashes Scissors</li>
-                    <li>Scissors decapitates Lizard</li>
-                    <li>Lizard eats Paper</li>
-                    <li>Paper disproves Spock</li>
-                    <li>Spock vaporizes Rock</li>
-                    <li>Rock crushes Scissors</li>
-                </ul>
-            </span>
+        <div id="github">
+            <h2>
+                <a href="https://github.com/KC-7" target="_blank" rel="noopener"
+                aria-label="Link to the creators GitHub page (opens in new tab)">
+                    KC-7 GitHub Projects <i class="fab fa-github"></i>
+                </a>
+            </h2>
         </div>
     </header>
+
+    <section id="rules">
+        <button type="button" class="collapsible">How To Play:</button>
+        <div class="content">
+        <p>
+            The game is an expansion on the game Rock, Paper, Scissors.<br>
+            Each player picks a variable and reveals it at the same time.<br>
+            The winner is the one who defeats the others.<br>
+            In a tie, the process is repeated until a winner is found.<br>
+            <ul>
+                <li>Scissors cuts Paper</li>
+                <li>Paper covers Rock</li>
+                <li>Rock crushes Lizard</li>
+                <li>Lizard poisons Spock</li>
+                <li>Spock smashes Scissors</li>
+                <li>Scissors decapitates Lizard</li>
+                <li>Lizard eats Paper</li>
+                <li>Paper disproves Spock</li>
+                <li>Spock vaporizes Rock</li>
+                <li>Rock crushes Scissors</li>
+            </ul>
+        </p>
+        </div>
+    </section>
 
     <section id="game">
         <div class="selections">
@@ -108,8 +126,6 @@
                     <span class="result-score" data-computer-score>0</span>
                 </h2>
             </div>
-            <!-- <div class="result-selection winner">✊</div>
-            <div class="result-selection">✌</div> -->
         </div>
     </section>
 
