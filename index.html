@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rock, Paper, Scissors<!--, Lizard, Spock--></title>
+    <title>Rock, Paper, Scissors
+        <!--, Lizard, Spock-->
+    </title>
 
     <!-- Link to Style Sheet -->
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,46 +22,36 @@
     <!-- font awesome script is at the end of the body to speed up load time -->
 
 </head>
+
 <body>
 
     <header>
-        <h1>Rock, Paper, Scissors<!--, Lizard, Spock--></h1>
+        <h1>Rock, Paper, Scissors
+            <!--, Lizard, Spock-->
+        </h1>
     </header>
 
     <section id="game">
-        <div class="options">
-            <button class="option" data-option="rock">Rock ✊</button>
-            <button class="option" data-option="paper">Paper ✋</button>
-            <button class="option" data-option="scissors">Scissors ✌</button>
-            <!--
-            <button class="option" data-option="lizard"><i class="fas fa-hand-lizard"></i></button>
-            <button class="option" data-option="spock"><i class="fas fa-hand-spock"></i></button>
-            -->
+        <div class="selections">
+            <button class="selection" data-selection="rock">Rock ✊</button>
+            <button class="selection" data-selection="paper">Paper ✋</button>
+            <button class="selection" data-selection="scissors">Scissors ✌</button>
         </div>
         <div class="results">
             <div>
                 <h2>
-                    Player
-                    <span class="score" data-player-score>0</span>
+                    You
+                    <span class="result-score" data-your-score>0</span>
                 </h2>
             </div>
             <div data-final-column>
                 <h2>
                     Computer
-                    <span class="score" data-computer-score>0</span>
+                    <span class="result-score" data-computer-score>0</span>
                 </h2>
             </div>
-
-            <!--  
-                <div class="result-option winner">
-                    ICON
-                    <div>
-
-                <div class="result-option">
-                    ICON
-                    <div>
-            -->
-            
+            <!-- <div class="result-selection winner">✊</div>
+            <div class="result-selection">✌</div> -->
         </div>
     </section>
 
@@ -83,8 +76,8 @@
         </div>
     </footer>
 
-    <!-- font awesome script
-    <script src="https://kit.fontawesome.com/872cb96f02.js" crossorigin="anonymous"></script> -->
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/872cb96f02.js" crossorigin="anonymous"></script>
 
 </body>
 

@@ -1,62 +1,62 @@
-const optionButtons = document.querySelectorAll('[data-option]')
+const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
-const playerScoreSpan = document.querySelector('[data-player-score]')
-const OPTIONS = [
-    {
-        name: "rock",
-        icon: "Rock ✊",
-        beats: "scissors"
-    },
-    {
-        name: "paper",
-        icon: "Paper ✋",
-        beats: "rock"
-    },
-    {
-        name: "scissors",
-        icon: "Scissors ✌",
-        beats: "paper"
-    }
+const yourScoreSpan = document.querySelector('[data-your-score]')
+const SELECTIONS = [
+  {
+    name: 'rock',
+    emoji: 'Rock ✊',
+    beats: 'scissors'
+  },
+  {
+    name: 'paper',
+    emoji: 'Paper ✋',
+    beats: 'rock'
+  },
+  {
+    name: 'scissors',
+    emoji: 'Scissors ✌',
+    beats: 'paper'
+  }
 ]
 
-optionButtons.forEach(optionButton => {
-    optionButton.addEventListener('click', e=> {
-        const optionName = optionButton.dataset.option
-        const option = OPTIONS.find(option => option.name === optionName)
-        makeOption(optionName)
-    })
+selectionButtons.forEach(selectionButton => {
+  selectionButton.addEventListener('click', e => {
+    const selectionName = selectionButton.dataset.selection
+    const selection = SELECTIONS.find(selection => selection.name === selectionName)
+    makeSelection(selection)
+  })
 })
 
-function makeOption(option) {
-    const computerOption = randomOption()
-    const playerWinner = isWinner(option, computerOption)
-    const computerWinner = isWinner(computerOption, option)
-    
-    addOptionResult(computerOption, computerWinner)
-    addOptionResult(option, playerWinner)
+function makeSelection(selection) {
+  const computerSelection = randomSelection()
+  const yourWinner = isWinner(selection, computerSelection)
+  const computerWinner = isWinner(computerSelection, selection)
 
-    if (playerWinner) incrementScore(playerScoreSpan)
-    if (computerWinner) incrementScore(computerScoreSpan)
+  addSelectionResult(computerSelection, computerWinner)
+  addSelectionResult(selection, yourWinner)
+
+  if (yourWinner) incrementScore(yourScoreSpan)
+  if (computerWinner) incrementScore(computerScoreSpan)
 }
 
-function incrementScore(scoreSpan){
-    scoreSpan.innerText = parseInt(scoreSpan.innerText) +1
+function incrementScore(scoreSpan) {
+  scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
 
-function addOptionResult(option, winner) {
-    const div = document.createElement('div')
-    div.innerText = option.icon
-    div.classList.add('result-option')
-    if (winner) div.classList.add('Winner')
-    finalColumn.after(div)
+function addSelectionResult(selection, winner) {
+  const div = document.createElement('div')
+  div.innerText = selection.emoji
+  div.classList.add('result-selection')
+  if (winner) div.classList.add('winner')
+  finalColumn.after(div)
 }
 
-function isWinner(option, opponentOption) {
-    return option.beats === opponentOption.name
+function isWinner(selection, opponentSelection) {
+  return selection.beats === opponentSelection.name
 }
 
-function randomOption () {
-    const randomIndex = Math.floor(Math.random() * OPTIONS.length)
-    return OPTIONS[randomIndex]
+function randomSelection() {
+  const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
+  return SELECTIONS[randomIndex]
 }
