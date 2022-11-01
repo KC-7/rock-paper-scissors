@@ -27,10 +27,32 @@
 <body>
 
     <header>
-        <h1>
-            Rock, Paper, Scissors
-            <!--, Lizard, Spock-->
-        </h1>
+        <div>
+            <h1>
+                Rock, Paper, Scissors
+                <!--, Lizard, Spock-->
+            </h1>
+        </div>
+        <div class="popup" onclick="myFunction()">How To Play
+            <span class="popuptext" id="myPopup">
+                The game is an expansion on the game Rock, Paper, Scissors. Each player picks a variable and reveals it
+                at the same time. The winner is the one who defeats the others. In a tie, the process is repeated until
+                a winner is found.
+                <br>
+                <ul>
+                    <li>Scissors cuts Paper</li>
+                    <li>Paper covers Rock</li>
+                    <li>Rock crushes Lizard</li>
+                    <li>Lizard poisons Spock</li>
+                    <li>Spock smashes Scissors</li>
+                    <li>Scissors decapitates Lizard</li>
+                    <li>Lizard eats Paper</li>
+                    <li>Paper disproves Spock</li>
+                    <li>Spock vaporizes Rock</li>
+                    <li>Rock crushes Scissors</li>
+                </ul>
+            </span>
+        </div>
     </header>
 
     <section id="game">
@@ -38,7 +60,7 @@
             <button class="selection" data-selection="rock">Rock <br> ✊ 🗿</button>
             <button class="selection" data-selection="paper">Paper <br> ✋ 📃</button>
             <button class="selection" data-selection="scissors">Scissors <br> ✌ ✂</button>
-            
+
             <!--
             <button class="selection" data-selection="lizard">Lizard <br> 👌 🦎</button> 
             <button class="selection" data-selection="spock">Spock <br> 🖖 🧑</button>

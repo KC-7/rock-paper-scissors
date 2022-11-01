@@ -2,8 +2,7 @@ const selectionButtons = document.querySelectorAll('[data-selection]')
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
-const SELECTIONS = [
-  {
+const SELECTIONS = [{
     name: 'rock',
     emoji: 'Rock ✊',
     beats: 'scissors'
@@ -59,4 +58,11 @@ function isWinner(selection, opponentSelection) {
 function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
   return SELECTIONS[randomIndex]
+}
+
+
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }
