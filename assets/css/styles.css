@@ -17,7 +17,8 @@ body {
 }
 
 #github:hover {
-    transform: scale(1.25); /* Increases the size when hovering */
+    transform: scale(1.25);
+    /* Increases the size when hovering */
 }
 
 header {
@@ -50,16 +51,19 @@ header {
     background-color: plum;
     color: rebeccapurple;
     font-weight: bold;
-    cursor: pointer; /* This changes the the mouse to a pointer when hovering, credit to Web Dev Simplified on Youtube */
+    cursor: pointer;
+    /* This changes the the mouse to a pointer when hovering, credit to Web Dev Simplified on Youtube */
     font-size: 2.5rem;
-    transition: 250ms; /* Slows the transition when increasing scale while hovering */
+    transition: 250ms;
+    /* Slows the transition when increasing scale while hovering */
     height: 225px;
     width: 225px;
     border-radius: 50%;
 }
 
 .selection:hover {
-    transform: scale(1.25); /* Increases the size when hovering */
+    transform: scale(1.25);
+    /* Increases the size when hovering */
 }
 
 /* The following code displays the results side by side centered */
@@ -102,7 +106,8 @@ footer a {
 }
 
 footer div:hover {
-    transform: scale(1.25); /* Increases the size when hovering */
+    transform: scale(1.25);
+    /* Increases the size when hovering */
 }
 
 
@@ -120,15 +125,16 @@ footer div:hover {
     outline: none;
     font-size: 15px;
     font-weight: bold;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
     background-color: whitesmoke;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
@@ -136,4 +142,4 @@ footer div:hover {
     color: rebeccapurple;
     padding: 25px;
     font-size: medium;
-  }
+}
