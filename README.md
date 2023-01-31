@@ -18,7 +18,7 @@ This implementation of Rock, Paper, Scissors is a browser-based game written in 
 This project is built with HTML, CSS, and JavaScript. The HTML file defines the structure and content of the game, the CSS styles the game, and the JavaScript handles the game logic and events.
 
 ## Getting Started
-To play Rock, Paper, Scissors, you will need to clone or download the repository. Once you have the repository, you can open the index.html file in your browser to start the game or simply use this [live link](https://kc-7.github.io/rock-paper-scissors/).
+To play Rock, Paper, Scissors, you will need to enter `python3 -m http.server` into the consol or simply use this [live link](https://kc-7.github.io/rock-paper-scissors/).
 
 ## How to play
 The game is an expansion on the classic Rock, Paper, Scissors. Each player picks a variable and reveals it at the same time. The winner is the one who defeats the others. In case of a tie, the process is repeated until a winner is found. The game rules are:
@@ -61,9 +61,9 @@ Contributions to the Rock, Paper, Scissors project are welcome. If you would lik
 - Submit a pull request for review.
 
 ## Sources
-This project was created using resources from the following sources:
+This basic demo project was created using resources from the following sources:
 
-- ChatGPT - used in part for the readme
+- ChatGPT - used in part for the readme to assit in documenting the project
 - W3Schools - favicon
 - Font Awesome - Icons
 - Web Dev Simplified Youtube Channel - RPS Walkthrough Coding Project
